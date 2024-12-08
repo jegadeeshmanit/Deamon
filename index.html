@@ -6,10 +6,29 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello devops</h1>
-    <h1>Hello devops</h1>
-    <h1>Hello devops</h1>
-    <h1>Hello devops</h1>
-    <h1>james is finidshed task</h1>
+    <h1>
+        1.ansible dev -b -m copy -a "src=/home/ansible/sam.txt dest=/home/ansible/"
+2.ansible dev -b -m copy -a "src=/home/ansible/sam.txt dest=/path/to/target/directory/"
+3.ansible dev -b -m file -a "path=/home/ansible/sam.txt state=absent"
+4.ansible dev -b -m file -a "path=/home/ansible/james mode=0750"
+ ->ansible dev -b -m file -a "path=/path/to/target/directory/sam.txt state=absent"
+5.ansible dev -b -m file -a "path=/home/ansible/james state=directory"
+6.ansible dev -b -m file -a "path=/home/ansible/james state=absent"
+7.ansible dev -b -m copy -a "content='This is a new file' dest=/home/ansible/gems.txt"
+8.ansible dev -b -m file -a "path=/home/ansible/gems.txt state=absent"
+9.ansible dev -b -m copy -a "content='create file in workernode' dest=/home/ansible/dev.txt mode=777"
+10.ansible dev -b -m file -a "path=/home/ansible/dev.txt state=absent"
+11.ansible dev -b -m shell -a "yum install git -y"
+12.ansible dev -b -m shell -a "yum info docker"
+  ->ansible dev -b -m shell -a "yum install docker -y"
+  ->ansible dev -b -m command -a "systemctl enable docker"
+  ->ansible dev -b -m shell -a "systemctl start docker"
+  ->ansible dev -b -m shell -a "systemctl status docker"
+13.ansible dev -b -m shell -a "docker pull httpd"
+14.ansible dev -b -m shell -a "docker run -it -d --name webapp httpd"
+  ->ansible dev -b -m shell -a "docker run -it -d --name webapp -p 8000:80 httpd"
+  ->ansible dev -b -m shell -a "docker ps"
+15.ansible dev -b -m shell -a "git clone https://github.com/jegadeeshmanit/Deamon.git"
+    </h1>
 </body>
 </html>
